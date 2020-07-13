@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidTestDemo</string>
+
+    <string name="fake_string">Fake string for test</string>
 </resources>

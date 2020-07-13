@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
@@ -43,6 +44,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login_activity)
 
         ButterKnife.bind(this)
+
+        Log.d("KCTEST", "fake string=" + Utils.getFakeString(this))
 
         edAccount.setOnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
