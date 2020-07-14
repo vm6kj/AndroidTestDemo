@@ -13,14 +13,14 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class LoginTest {
+class EspressoTest {
 
     @Rule
     @JvmField
     val loginActivityRule = ActivityTestRule(LoginActivity::class.java)
 
     @Test
-    fun checkEditTextStateChange() {
+    fun loginThenLogoutTest() {
         onView(withId(R.id.ed_account)).check(matches((isEnabled())))
         onView(withId(R.id.ed_password)).check(matches((isEnabled())))
 
