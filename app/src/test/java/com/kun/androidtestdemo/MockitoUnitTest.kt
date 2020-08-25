@@ -6,6 +6,7 @@ import org.hamcrest.MatcherAssert.assertThat
 
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.BDDMockito.given
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
 import org.mockito.junit.MockitoJUnitRunner
@@ -20,7 +21,8 @@ class MockitoUnitTest {
 
     @Test
     fun mockitoGetFakeStringTest() {
-        `when`(mockContext.getString(R.string.fake_string)).thenReturn(FAKE_STRING)
+        // `when`(mockContext.getString(R.string.fake_string)).thenReturn(FAKE_STRING)
+        given(mockContext.getString(R.string.fake_string)).willReturn(FAKE_STRING)
 
         val result: String = Utils.getFakeString(mockContext)
 
